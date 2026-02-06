@@ -455,8 +455,8 @@ body {
 .wave-bar:nth-child(12) { height: 30px; animation-delay: 1.1s; }
 
 @keyframes wave {
-    0%, 100% { transform: scaleY(0.5); }
-    50% { transform: scaleY(1); }
+    0%, 100% { transform: translateY(3px); }
+    50% { transform: translateY(-3px); }
 }
 
 .transcription-demo {
