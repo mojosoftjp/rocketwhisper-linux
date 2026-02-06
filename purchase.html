@@ -558,24 +558,6 @@
             font-size: 0.9rem;
         }
 
-        /* FAQ セクション */
-        .purchase-faq {
-            padding: 4rem 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .purchase-faq h2 {
-            text-align: center;
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-        }
-
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
         /* Linux版専用: 購入リンク用ナビスタイル */
         .nav-menu li a.nav-btn-purchase {
@@ -861,46 +843,61 @@
     </section>
 
     <!-- よくある質問 -->
-    <section class="purchase-faq">
-        <h2>よくある質問</h2>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question">ライセンスキーはすぐに届きますか？</button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>お支払い確認後、24時間以内にメールでライセンスキーをお届けします。通常は数時間以内にお届けしますが、時差や確認作業により遅れる場合があります。</p>
+    <section class="faq-section purchase-faq">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-icon">❓</span>
+                よくある質問
+            </h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>ライセンスキーはすぐに届きますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span>お支払い確認後、24時間以内にメールでライセンスキーをお届けします。通常は数時間以内にお届けしますが、時差や確認作業により遅れる場合があります。</span>
                     </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">PCを買い替えた場合はどうなりますか？</button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p><strong>個人版</strong>の場合は、サポートまでご連絡ください。新しいPCで使用できるようライセンスを再発行いたします。<strong>法人版</strong>の場合は、PC台数無制限のため再発行は不要です。</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>PCを買い替えた場合はどうなりますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span><strong>個人版</strong>の場合は、サポートまでご連絡ください。新しいPCで使用できるようライセンスを再発行いたします。<strong>法人版</strong>の場合は、PC台数無制限のため再発行は不要です。</span>
                     </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">Windows版やMac版で購入したライセンスは使えますか？</button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>はい、RocketWhisperのライセンスは<strong>Windows版・Mac版・Linux版で共通</strong>です。いずれかのプラットフォームで購入したライセンスは、他のプラットフォームでもそのままご利用いただけます。</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>Windows版やMac版で購入したライセンスは使えますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span>はい、RocketWhisperのライセンスは<strong>Windows版・Mac版・Linux版で共通</strong>です。いずれかのプラットフォームで購入したライセンスは、他のプラットフォームでもそのままご利用いただけます。</span>
                     </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">返金はできますか？</button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>原則として返金には対応しておりません。ご購入前に7日間の無料試用版ですべての機能をお試しいただき、動作をご確認ください。</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>返金はできますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span>原則として返金には対応しておりません。ご購入前に7日間の無料試用版ですべての機能をお試しいただき、動作をご確認ください。</span>
                     </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">領収書は発行できますか？</button>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <p>はい、ご希望の方には領収書を発行いたします。お支払い後、メールにてお申し付けください。</p>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>領収書は発行できますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span>はい、ご希望の方には領収書を発行いたします。お支払い後、メールにてお申し付けください。</span>
                     </div>
                 </div>
             </div>
@@ -1206,23 +1203,6 @@
             }
         });
 
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                const isActive = faqItem.classList.contains('active');
-
-                // 他のFAQを閉じる
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-
-                // クリックしたFAQを開く/閉じる
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
-            });
-        });
     </script>
 </body>
 </html>
