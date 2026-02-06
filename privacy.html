@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - RocketWhisper Linux版</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        .privacy-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .privacy-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        .privacy-section p, .privacy-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .privacy-section ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .highlight-box h3 {
+            color: var(--success-color);
+            margin-bottom: 10px;
+        }
+        .update-date {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="aurora"></div>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">RocketWhisper <span class="linux-badge">Linux</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#features">機能</a></li>
+                <li><a href="index.html#download">ダウンロード</a></li>
+                <li><a href="help.html">ヘルプ</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="privacy-container">
+        <h1 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem;">
+            <span style="margin-right: 10px;">🔒</span>プライバシーポリシー
+        </h1>
+        <p class="update-date">最終更新日: 2026年2月6日</p>
+
+        <div class="highlight-box">
+            <h3>🛡️ RocketWhisperのプライバシー保護</h3>
+            <p>RocketWhisperは<strong>完全オフライン</strong>で動作する音声認識アプリです。音声データは一切外部サーバーに送信されず、すべての処理がお使いのコンピュータ内で完結します。</p>
+        </div>
+
+        <section class="privacy-section">
+            <h2>1. 収集する情報</h2>
+            <p>RocketWhisperは以下の情報のみを収集・保存します：</p>
+            <ul>
+                <li><strong>設定情報:</strong> アプリの設定（ホットキー、モデル選択など）はローカルファイルに保存されます</li>
+                <li><strong>ライセンス情報:</strong> ライセンス認証時のみ、ライセンスキーの有効性確認のため当社サーバーと通信します</li>
+            </ul>
+            <p><strong>収集しない情報:</strong></p>
+            <ul>
+                <li>音声データ</li>
+                <li>認識結果テキスト</li>
+                <li>使用状況・統計情報</li>
+                <li>個人を特定できる情報</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>2. 音声データの処理</h2>
+            <p>RocketWhisperの音声認識処理は、以下のように完全にローカルで行われます：</p>
+            <ul>
+                <li>マイクからの音声入力は、お使いのコンピュータ内でのみ処理されます</li>
+                <li>音声認識エンジン（Whisper）はローカルで動作します</li>
+                <li>音声データはインターネットに送信されることはありません</li>
+                <li>録音データは一時ファイルとして保存され、認識完了後に削除されます</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>3. AI処理機能について</h2>
+            <p>AIコマンドモードやAI処理機能を使用する場合：</p>
+            <ul>
+                <li>ユーザーが設定したAIプロバイダ（OpenAI、Anthropic、Google等）にテキストが送信されます</li>
+                <li>送信されるのは認識結果のテキストのみで、音声データは送信されません</li>
+                <li>ローカルLLM（Ollama等）を使用する場合は、すべての処理がローカルで完結します</li>
+                <li>AIプロバイダへの送信はユーザーの明示的な操作によってのみ行われます</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>4. ライセンス認証</h2>
+            <p>ライセンス認証時のみ、以下の情報を当社サーバーに送信します：</p>
+            <ul>
+                <li>ライセンスキー</li>
+                <li>ハードウェアID（PCを識別するための匿名化されたID）</li>
+            </ul>
+            <p>これらの情報はライセンスの有効性確認にのみ使用され、他の目的には使用しません。</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>5. データの保存場所</h2>
+            <p>すべてのデータはお使いのコンピュータ内のみに保存されます：</p>
+            <ul>
+                <li><strong>設定ファイル:</strong> <code>~/.config/RocketWhisper/</code></li>
+                <li><strong>Whisperモデル:</strong> <code>~/.local/share/RocketWhisper/Models/</code></li>
+                <li><strong>一時ファイル:</strong> <code>/tmp/</code>（セッション終了時に削除）</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>6. 第三者への情報提供</h2>
+            <p>当社は、法令に基づく場合を除き、お客様の情報を第三者に提供することはありません。</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>7. セキュリティ</h2>
+            <p>RocketWhisperはセキュリティを重視して設計されています：</p>
+            <ul>
+                <li>すべての処理はローカルで完結し、外部への不要な通信は行いません</li>
+                <li>ライセンス認証の通信はHTTPS（TLS暗号化）で保護されます</li>
+                <li>一時ファイルは適切に削除されます</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>8. お問い合わせ</h2>
+            <p>プライバシーに関するご質問やお問い合わせは、以下までご連絡ください：</p>
+            <p><strong>Mojosoft</strong><br>
+            Email: support@mojosoft.co.jp<br>
+            Web: <a href="https://mojosoft.co.jp" style="color: var(--primary-color);">https://mojosoft.co.jp</a></p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>9. ポリシーの変更</h2>
+            <p>本プライバシーポリシーは、必要に応じて変更されることがあります。重要な変更がある場合は、当ウェブサイトでお知らせします。</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn btn-secondary">
+                <span class="btn-icon">←</span>
+                トップに戻る
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mojosoft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

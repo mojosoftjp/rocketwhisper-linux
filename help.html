@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘルプ - RocketWhisper Linux版</title>
+    <meta name="description" content="RocketWhisper Linux版のヘルプページ。インストール方法、使い方、トラブルシューティングを解説。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .help-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        .help-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .help-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .help-section h3 {
+            margin: 25px 0 15px;
+            color: var(--primary-color);
+        }
+        .help-section p, .help-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .help-section ul, .help-section ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .help-section code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            color: var(--success-color);
+            background: none;
+            padding: 0;
+        }
+        .tip-box {
+            background: rgba(74, 144, 217, 0.1);
+            border: 1px solid rgba(74, 144, 217, 0.3);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .tip-box::before {
+            content: "💡 ";
+        }
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .warning-box::before {
+            content: "⚠️ ";
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .help-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .help-table th, .help-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        .help-table th {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .help-table td {
+            color: var(--text-secondary);
+        }
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .toc h2 {
+            margin-bottom: 15px;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="aurora"></div>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">RocketWhisper <span class="linux-badge">Linux</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#features">機能</a></li>
+                <li><a href="index.html#download">ダウンロード</a></li>
+                <li><a href="index.html#specs">動作環境</a></li>
+                <li><a href="help.html">ヘルプ</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <h1 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">
+            <span style="margin-right: 10px;">📖</span>ヘルプ
+        </h1>
+
+        <div class="toc">
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#install">1. インストール方法</a></li>
+                <li><a href="#packages">2. 必須パッケージ</a></li>
+                <li><a href="#first-run">3. 初回起動</a></li>
+                <li><a href="#hotkeys">4. ホットキー</a></li>
+                <li><a href="#models">5. Whisperモデル</a></li>
+                <li><a href="#ai-command">6. AIコマンドモード</a></li>
+                <li><a href="#voice-search">7. 音声検索</a></li>
+                <li><a href="#voice-launcher">8. 音声ランチャー</a></li>
+                <li><a href="#app-modes">9. アプリ別処理モード</a></li>
+                <li><a href="#wayland">10. Wayland環境</a></li>
+                <li><a href="#cuda">11. CUDA/GPU設定</a></li>
+                <li><a href="#troubleshooting">12. トラブルシューティング</a></li>
+            </ul>
+        </div>
+
+        <section id="install" class="help-section">
+            <h2><span>📦</span> 1. インストール方法</h2>
+
+            <h3>AppImageの実行</h3>
+            <p>RocketWhisperはAppImage形式で配布されています。インストールは不要で、ダウンロードして実行するだけで使えます。</p>
+
+            <div class="code-block">
+                <code># 1. ダウンロードしたAppImageに実行権限を付与<br>
+chmod +x RocketWhisper-1.1.3-aarch64.AppImage<br><br>
+# 2. 実行<br>
+./RocketWhisper-1.1.3-aarch64.AppImage</code>
+            </div>
+
+            <h3>FUSEがない環境</h3>
+            <p>AppImageはFUSEを使用します。FUSEがインストールされていない環境では、以下のように展開して実行できます：</p>
+
+            <div class="code-block">
+                <code># FUSEをインストール<br>
+sudo apt install fuse libfuse2<br><br>
+# または展開して実行<br>
+./RocketWhisper-1.1.3-aarch64.AppImage --appimage-extract<br>
+./squashfs-root/AppRun</code>
+            </div>
+        </section>
+
+        <section id="packages" class="help-section">
+            <h2><span>📋</span> 2. 必須パッケージ</h2>
+
+            <p>RocketWhisperを使用するには、以下のパッケージが必要です：</p>
+
+            <h3>Ubuntu / Debian / Linux Mint / Pop!_OS</h3>
+            <div class="code-block">
+                <code>sudo apt install pulseaudio-utils xdotool xclip ffmpeg</code>
+            </div>
+
+            <h3>Fedora</h3>
+            <div class="code-block">
+                <code>sudo dnf install pulseaudio-utils xdotool xclip ffmpeg</code>
+            </div>
+
+            <h3>Arch Linux</h3>
+            <div class="code-block">
+                <code>sudo pacman -S pulseaudio xdotool xclip ffmpeg</code>
+            </div>
+
+            <h3>パッケージの詳細</h3>
+            <div class="table-container">
+                <table class="help-table">
+                    <tr>
+                        <th>パッケージ</th>
+                        <th>用途</th>
+                        <th>必須</th>
+                    </tr>
+                    <tr>
+                        <td><code>pulseaudio-utils</code></td>
+                        <td>マイク録音（parecコマンド）</td>
+                        <td>必須</td>
+                    </tr>
+                    <tr>
+                        <td><code>xdotool</code></td>
+                        <td>キーボード操作・ウィンドウ検出</td>
+                        <td>必須</td>
+                    </tr>
+                    <tr>
+                        <td><code>xclip</code></td>
+                        <td>クリップボード操作</td>
+                        <td>必須</td>
+                    </tr>
+                    <tr>
+                        <td><code>ffmpeg</code></td>
+                        <td>音声ファイル変換</td>
+                        <td>任意</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                インストール確認: <code>which parec xdotool xclip</code>
+            </div>
+        </section>
+
+        <section id="first-run" class="help-section">
+            <h2><span>🚀</span> 3. 初回起動</h2>
+
+            <p>初回起動時、RocketWhisperは自動的にWhisperモデルをダウンロードします。</p>
+
+            <ol>
+                <li>AppImageを実行</li>
+                <li>初回セットアップ画面が表示されます</li>
+                <li>使用するモデルを選択（推奨: large-v3-turbo）</li>
+                <li>モデルのダウンロードが完了するまで待機</li>
+                <li>ダウンロード完了後、メイン画面が表示されます</li>
+            </ol>
+
+            <div class="tip-box">
+                モデルは <code>~/.local/share/RocketWhisper/Models/</code> に保存されます。
+            </div>
+        </section>
+
+        <section id="hotkeys" class="help-section">
+            <h2><span>⌨️</span> 4. ホットキー</h2>
+
+            <h3>デフォルトホットキー</h3>
+            <div class="table-container">
+                <table class="help-table">
+                    <tr>
+                        <th>機能</th>
+                        <th>ホットキー</th>
+                        <th>説明</th>
+                    </tr>
+                    <tr>
+                        <td>録音開始/停止</td>
+                        <td><code>F8</code></td>
+                        <td>押して話す。もう一度押して認識</td>
+                    </tr>
+                    <tr>
+                        <td>キャンセル</td>
+                        <td><code>Escape</code></td>
+                        <td>録音を中断</td>
+                    </tr>
+                    <tr>
+                        <td>AIコマンド</td>
+                        <td><code>Ctrl + Shift + Space</code></td>
+                        <td>選択テキストにAI処理</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>ホットキーの変更</h3>
+            <p>設定画面（歯車アイコン）→「ホットキー」タブで変更できます。</p>
+            <p>テキストボックスをクリックして、新しいキーの組み合わせを押すと設定されます。</p>
+        </section>
+
+        <section id="models" class="help-section">
+            <h2><span>🧠</span> 5. Whisperモデル</h2>
+
+            <div class="table-container">
+                <table class="help-table">
+                    <tr>
+                        <th>モデル</th>
+                        <th>サイズ</th>
+                        <th>精度</th>
+                        <th>速度</th>
+                        <th>推奨メモリ</th>
+                    </tr>
+                    <tr>
+                        <td>tiny</td>
+                        <td>75MB</td>
+                        <td>低</td>
+                        <td>最速</td>
+                        <td>4GB</td>
+                    </tr>
+                    <tr>
+                        <td>base</td>
+                        <td>142MB</td>
+                        <td>中低</td>
+                        <td>高速</td>
+                        <td>4GB</td>
+                    </tr>
+                    <tr>
+                        <td>small</td>
+                        <td>466MB</td>
+                        <td>中</td>
+                        <td>普通</td>
+                        <td>8GB</td>
+                    </tr>
+                    <tr>
+                        <td>medium</td>
+                        <td>1.5GB</td>
+                        <td>高</td>
+                        <td>やや遅</td>
+                        <td>8GB</td>
+                    </tr>
+                    <tr>
+                        <td>large-v3-turbo</td>
+                        <td>1.6GB</td>
+                        <td>高</td>
+                        <td>高速</td>
+                        <td>8GB</td>
+                    </tr>
+                    <tr>
+                        <td>large-v3</td>
+                        <td>2.9GB</td>
+                        <td>最高</td>
+                        <td>遅</td>
+                        <td>16GB</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                <strong>推奨:</strong> large-v3-turboは精度と速度のバランスが良く、多くの環境で最適です。
+            </div>
+        </section>
+
+        <section id="ai-command" class="help-section">
+            <h2><span>🤖</span> 6. AIコマンドモード</h2>
+
+            <p>選択したテキストに対して、音声で指示を出してAI処理を行う機能です。</p>
+
+            <h3>使い方</h3>
+            <ol>
+                <li>任意のアプリでテキストを選択</li>
+                <li>AIコマンドホットキー（<code>Ctrl + Shift + Space</code>）を押す</li>
+                <li>音声で指示（「日本語に翻訳して」「要約して」など）</li>
+                <li>もう一度ホットキーを押して処理実行</li>
+                <li>結果がRocketWhisperのウィンドウに表示されます</li>
+            </ol>
+
+            <h3>AI処理プロバイダの設定</h3>
+            <p>AIコマンドモードを使用するには、設定画面でAI処理プロバイダを設定する必要があります：</p>
+            <ul>
+                <li>OpenAI (GPT-4, GPT-3.5)</li>
+                <li>Anthropic (Claude)</li>
+                <li>Google Gemini</li>
+                <li>Groq (LLaMA)</li>
+                <li>OpenAI互換API（ローカルLLM等）</li>
+            </ul>
+
+            <div class="warning-box">
+                AIコマンドモードにはAIプロバイダのAPIキーが必要です。設定画面の「AI処理」タブで設定してください。
+            </div>
+        </section>
+
+        <section id="voice-search" class="help-section">
+            <h2><span>🔍</span> 7. 音声検索</h2>
+
+            <p>特定のフレーズを認識すると、自動でブラウザ検索を実行します。</p>
+
+            <h3>対応フレーズ</h3>
+            <ul>
+                <li>「〇〇について調べて」</li>
+                <li>「〇〇を検索して」</li>
+                <li>「〇〇をググって」</li>
+                <li>「〇〇について教えて」</li>
+                <li>「〇〇って何？」</li>
+                <li>「〇〇とは？」</li>
+            </ul>
+
+            <h3>設定</h3>
+            <p>設定画面→「音声ランチャー・検索」タブで有効/無効を切り替えられます。</p>
+        </section>
+
+        <section id="voice-launcher" class="help-section">
+            <h2><span>🚀</span> 8. 音声ランチャー</h2>
+
+            <p>特定のキーワードを話すと、対応するアプリケーションを起動できます。</p>
+
+            <h3>設定方法</h3>
+            <ol>
+                <li>設定画面→「音声ランチャー・検索」タブを開く</li>
+                <li>「追加」ボタンをクリック</li>
+                <li>キーワード（例: 「ターミナル起動」）を入力</li>
+                <li>実行ファイルパス（例: <code>/usr/bin/gnome-terminal</code>）を入力</li>
+                <li>保存をクリック</li>
+            </ol>
+
+            <div class="tip-box">
+                「参照...」ボタンでファイルを選択することもできます。
+            </div>
+        </section>
+
+        <section id="app-modes" class="help-section">
+            <h2><span>🎯</span> 9. アプリ別処理モード</h2>
+
+            <p>アプリケーションごとに異なる設定を自動適用できます。</p>
+
+            <h3>プリセットモード</h3>
+            <ul>
+                <li><strong>スマート:</strong> 句読点自動挿入 + 自動修正</li>
+                <li><strong>シンプル:</strong> 認識結果をそのまま出力</li>
+                <li><strong>コマンド:</strong> 音声コマンド有効</li>
+            </ul>
+
+            <h3>アプリ紐づけ</h3>
+            <ol>
+                <li>設定画面→「アプリ別処理」タブを開く</li>
+                <li>「現在のアプリを取得」をクリック（対象アプリをフォアグラウンドにしておく）</li>
+                <li>使用するモードを選択</li>
+                <li>保存をクリック</li>
+            </ol>
+        </section>
+
+        <section id="wayland" class="help-section">
+            <h2><span>⚠️</span> 10. Wayland環境</h2>
+
+            <p>Waylandでは一部機能に制限があります。</p>
+
+            <h3>制限事項</h3>
+            <ul>
+                <li>グローバルホットキー: <code>ydotool</code>が必要、root権限が必要な場合あり</li>
+                <li>自動貼り付け: <code>wl-clipboard</code>が必要</li>
+                <li>AIコマンドモード: クリップボード制限の影響</li>
+                <li>アプリ別処理: ウィンドウ検出に制限</li>
+            </ul>
+
+            <h3>追加パッケージ</h3>
+            <div class="code-block">
+                <code>sudo apt install ydotool wl-clipboard</code>
+            </div>
+
+            <div class="tip-box">
+                全機能を使用するには、ログイン時に「Xorg」または「X11」セッションを選択してください。
+            </div>
+
+            <h3>セッションの確認</h3>
+            <div class="code-block">
+                <code>echo $XDG_SESSION_TYPE<br>
+# "x11" と表示されればX11環境<br>
+# "wayland" と表示されればWayland環境</code>
+            </div>
+        </section>
+
+        <section id="cuda" class="help-section">
+            <h2><span>🎮</span> 11. CUDA/GPU設定</h2>
+
+            <p>NVIDIA GPU搭載環境では、自動的にCUDA加速が有効になります。</p>
+
+            <h3>対応GPU</h3>
+            <ul>
+                <li>NVIDIA DGX Spark (Blackwell) - 最適化済み</li>
+                <li>Jetson AGX Orin (Ampere)</li>
+                <li>Jetson Orin NX/Nano (Ampere)</li>
+            </ul>
+
+            <h3>確認方法</h3>
+            <div class="code-block">
+                <code># NVIDIAドライバが認識されているか確認<br>
+nvidia-smi<br><br>
+# CUDAバージョン確認<br>
+nvcc --version</code>
+            </div>
+
+            <div class="tip-box">
+                CUDA 12.0以上が必要です。GPUがない場合は自動的にCPUにフォールバックします。
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="help-section">
+            <h2><span>🔧</span> 12. トラブルシューティング</h2>
+
+            <h3>マイクが認識されない</h3>
+            <div class="code-block">
+                <code># PulseAudioのソース（入力デバイス）一覧を表示<br>
+pactl list sources short<br><br>
+# 録音テスト<br>
+parec --device=0 --rate=16000 --channels=1 --format=s16le | head -c 160000 > test.raw</code>
+            </div>
+
+            <h3>ホットキーが反応しない</h3>
+            <div class="code-block">
+                <code># xdotoolの動作確認<br>
+xdotool getactivewindow<br><br>
+# X11セッションで実行しているか確認<br>
+echo $XDG_SESSION_TYPE</code>
+            </div>
+
+            <h3>AppImageが起動しない</h3>
+            <div class="code-block">
+                <code># FUSEをインストール<br>
+sudo apt install fuse libfuse2<br><br>
+# または展開して実行<br>
+./RocketWhisper-*.AppImage --appimage-extract<br>
+./squashfs-root/AppRun</code>
+            </div>
+
+            <h3>文字化けする</h3>
+            <div class="code-block">
+                <code># 日本語フォントをインストール<br>
+sudo apt install fonts-noto-cjk</code>
+            </div>
+
+            <h3>設定ファイルの場所</h3>
+            <div class="code-block">
+                <code>~/.config/RocketWhisper/<br>
+├── settings.json          # アプリ設定<br>
+├── modes.json             # 処理モード設定<br>
+├── mappings.json          # アプリ別マッピング<br>
+├── voice_launcher.json    # 音声ランチャー設定<br>
+└── correction_rules.json  # 誤認識修正ルール</code>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn btn-secondary">
+                <span class="btn-icon">←</span>
+                トップに戻る
+            </a>
+            <a href="support.html" class="btn btn-primary">
+                <span class="btn-icon">💬</span>
+                お問い合わせ
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mojosoft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
