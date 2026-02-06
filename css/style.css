@@ -244,6 +244,21 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
+.nav-btn-purchase {
+    background: linear-gradient(135deg, #4A90D9, #67B8F7) !important;
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-btn-purchase:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 144, 217, 0.4);
+    color: white !important;
+}
+
 .nav-toggle {
     display: none;
     background: none;
