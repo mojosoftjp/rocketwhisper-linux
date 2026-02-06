@@ -430,31 +430,35 @@ body {
     justify-content: center;
     align-items: center;
     gap: 4px;
-    height: 80px;
+    height: 120px;  /* 固定高さでウィンドウ伸縮を防止 */
     margin-bottom: 20px;
+    overflow: hidden;  /* はみ出し防止 */
 }
 
 .wave-bar {
     width: 6px;
     background: var(--gradient-primary);
     border-radius: 3px;
-    /* animation disabled - static waveform */
+    animation: wave 1.2s ease-in-out infinite;
 }
 
-.wave-bar:nth-child(1) { height: 20px; }
-.wave-bar:nth-child(2) { height: 40px; }
-.wave-bar:nth-child(3) { height: 60px; }
-.wave-bar:nth-child(4) { height: 80px; }
-.wave-bar:nth-child(5) { height: 60px; }
-.wave-bar:nth-child(6) { height: 40px; }
-.wave-bar:nth-child(7) { height: 60px; }
-.wave-bar:nth-child(8) { height: 80px; }
-.wave-bar:nth-child(9) { height: 60px; }
-.wave-bar:nth-child(10) { height: 40px; }
-.wave-bar:nth-child(11) { height: 20px; }
-.wave-bar:nth-child(12) { height: 30px; }
+.wave-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
+.wave-bar:nth-child(2) { height: 40px; animation-delay: 0.1s; }
+.wave-bar:nth-child(3) { height: 60px; animation-delay: 0.2s; }
+.wave-bar:nth-child(4) { height: 80px; animation-delay: 0.3s; }
+.wave-bar:nth-child(5) { height: 60px; animation-delay: 0.4s; }
+.wave-bar:nth-child(6) { height: 40px; animation-delay: 0.5s; }
+.wave-bar:nth-child(7) { height: 60px; animation-delay: 0.6s; }
+.wave-bar:nth-child(8) { height: 80px; animation-delay: 0.7s; }
+.wave-bar:nth-child(9) { height: 60px; animation-delay: 0.8s; }
+.wave-bar:nth-child(10) { height: 40px; animation-delay: 0.9s; }
+.wave-bar:nth-child(11) { height: 20px; animation-delay: 1.0s; }
+.wave-bar:nth-child(12) { height: 30px; animation-delay: 1.1s; }
 
-/* wave animation removed */
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.5); }
+}
 
 .transcription-demo {
     text-align: center;
