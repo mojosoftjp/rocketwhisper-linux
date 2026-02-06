@@ -399,6 +399,7 @@ body {
     border-radius: 16px;
     overflow: hidden;
     width: 400px;
+    height: 330px;  /* 固定高さでウィンドウ伸縮を完全防止 */
     box-shadow: var(--shadow-glow);
     transform: rotateY(-5deg) rotateX(5deg);
     transition: transform 0.5s ease;
@@ -443,13 +444,14 @@ body {
 }
 
 .waveform {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
-    height: 120px;  /* 固定高さでウィンドウ伸縮を防止 */
+    height: 120px;
     margin-bottom: 20px;
-    overflow: hidden;  /* はみ出し防止 */
+    overflow: hidden;
 }
 
 .wave-bar {
@@ -457,6 +459,8 @@ body {
     background: var(--gradient-primary);
     border-radius: 3px;
     animation: wave 1.2s ease-in-out infinite;
+    transform-origin: center;  /* 中央から拡大縮小 */
+    will-change: transform;    /* GPUレイヤー分離でレイアウト影響を防止 */
 }
 
 .wave-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
