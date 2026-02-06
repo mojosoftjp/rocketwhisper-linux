@@ -438,6 +438,8 @@ body {
 
 .preview-content {
     padding: 40px 20px;
+    height: 280px;  /* 固定高さでウィンドウ伸縮を防止 */
+    overflow: hidden;
 }
 
 .waveform {
