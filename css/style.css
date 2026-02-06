@@ -438,7 +438,7 @@ body {
     width: 6px;
     background: var(--gradient-primary);
     border-radius: 3px;
-    animation: wave 1s ease-in-out infinite;
+    /* animation disabled - static waveform */
 }
 
 .wave-bar:nth-child(1) { height: 20px; animation-delay: 0s; }
