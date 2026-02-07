@@ -1238,6 +1238,49 @@ section {
     font-size: 1.2rem;
 }
 
+.download-notice {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: rgba(255, 170, 50, 0.1);
+    border: 1px solid rgba(255, 170, 50, 0.35);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.download-notice .notice-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.download-notice .notice-content h4 {
+    color: #ffaa32;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.download-notice .notice-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.download-notice .code-block {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: inline-block;
+}
+
+.download-notice .code-block code {
+    color: #67B8F7;
+    font-size: 0.88rem;
+}
+
 /* Pricing Section */
 .pricing-section {
     background: linear-gradient(180deg, transparent 0%, rgba(30, 30, 50, 0.5) 50%, transparent 100%);
