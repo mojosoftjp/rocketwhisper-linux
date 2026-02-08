@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script>!function(){var l=localStorage.getItem("rw-lang");if("en"!==l&&"ja"===l){var p=location.pathname.split("/").pop()||"index.html";location.replace("../"+p+location.hash)}}();</script>
+    <script>!function(){var l=localStorage.getItem("rw-lang");if("en"!==l&&("ja"===l||(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("../"+p+location.hash)}}();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RocketWhisper for Linux - Local AI Speech Recognition App</title>
     <meta name="description" content="RocketWhisper for Linux is a high-accuracy speech recognition app that works completely offline. Supports Ubuntu, Debian, Fedora. CUDA acceleration with NVIDIA GPUs (DGX Spark, Jetson).">
