@@ -218,7 +218,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 8px;
     align-items: center;
 }
 
@@ -227,6 +227,8 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.9rem;
 }
 
 .nav-menu a:hover {
@@ -1575,7 +1577,7 @@ section {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .nav-menu {
         display: none;
         position: absolute;
@@ -1590,6 +1592,10 @@ section {
 
     .nav-menu.active {
         display: flex;
+    }
+
+    .nav-menu a {
+        font-size: 1rem;
     }
 
     .nav-toggle {
