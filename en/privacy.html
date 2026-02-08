@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - RocketWhisper for Linux</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        .privacy-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .privacy-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+        .privacy-section p, .privacy-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .privacy-section ul {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .highlight-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .highlight-box h3 {
+            color: var(--success-color);
+            margin-bottom: 10px;
+        }
+        .update-date {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="aurora"></div>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">RocketWhisper <span class="linux-badge">Linux</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="../privacy.html">&#x1F1EF;&#x1F1F5; Japanese</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="privacy-container">
+        <h1 style="text-align: center; margin-bottom: 20px; font-size: 2.5rem;">
+            <span style="margin-right: 10px;">🔒</span>Privacy Policy
+        </h1>
+        <p class="update-date">Last updated: February 6, 2026</p>
+
+        <div class="highlight-box">
+            <h3>🛡️ RocketWhisper Privacy Protection</h3>
+            <p>RocketWhisper is a <strong>completely offline</strong> speech recognition app. Voice data is never sent to external servers -- all processing is performed entirely on your computer.</p>
+        </div>
+
+        <section class="privacy-section">
+            <h2>1. Information We Collect</h2>
+            <p>RocketWhisper only collects and stores the following information:</p>
+            <ul>
+                <li><strong>Settings:</strong> App settings (hotkeys, model selection, etc.) are saved to local files</li>
+                <li><strong>License information:</strong> During license activation only, we communicate with our server to verify license key validity</li>
+            </ul>
+            <p><strong>Information we do NOT collect:</strong></p>
+            <ul>
+                <li>Voice data</li>
+                <li>Recognized text</li>
+                <li>Usage statistics or analytics</li>
+                <li>Personally identifiable information</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>2. Voice Data Processing</h2>
+            <p>RocketWhisper's speech recognition is performed entirely locally as follows:</p>
+            <ul>
+                <li>Microphone input is processed exclusively on your computer</li>
+                <li>The speech recognition engine (Whisper) runs locally</li>
+                <li>Voice data is never transmitted over the internet</li>
+                <li>Recordings are saved as temporary files and deleted after recognition is complete</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>3. AI Processing Features</h2>
+            <p>When using AI Command Mode or AI Processing features:</p>
+            <ul>
+                <li>Text may be sent to the AI provider configured by the user (OpenAI, Anthropic, Google, etc.)</li>
+                <li>Only recognized text is sent -- voice data is never transmitted</li>
+                <li>When using local LLMs (Ollama, etc.), all processing remains entirely local</li>
+                <li>Data is sent to AI providers only through explicit user actions</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>4. License Activation</h2>
+            <p>During license activation only, the following information is sent to our server:</p>
+            <ul>
+                <li>License key</li>
+                <li>Hardware ID (an anonymized identifier for your PC)</li>
+            </ul>
+            <p>This information is used solely to verify license validity and is not used for any other purpose.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>5. Data Storage Locations</h2>
+            <p>All data is stored exclusively on your computer:</p>
+            <ul>
+                <li><strong>Configuration files:</strong> <code>~/.config/RocketWhisper/</code></li>
+                <li><strong>Whisper models:</strong> <code>~/.local/share/RocketWhisper/Models/</code></li>
+                <li><strong>Temporary files:</strong> <code>/tmp/</code> (deleted at session end)</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>6. Third-Party Disclosure</h2>
+            <p>We do not provide your information to third parties, except as required by law.</p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>7. Security</h2>
+            <p>RocketWhisper is designed with security as a priority:</p>
+            <ul>
+                <li>All processing is performed locally with no unnecessary external communication</li>
+                <li>License activation communication is protected by HTTPS (TLS encryption)</li>
+                <li>Temporary files are properly deleted</li>
+            </ul>
+        </section>
+
+        <section class="privacy-section">
+            <h2>8. Contact Us</h2>
+            <p>For questions or inquiries about privacy, please contact us at:</p>
+            <p><strong>Mojosoft</strong><br>
+            Email: support@mojosoft.co.jp<br>
+            Web: <a href="https://mojosoft.co.jp" style="color: var(--primary-color);">https://mojosoft.co.jp</a></p>
+        </section>
+
+        <section class="privacy-section">
+            <h2>9. Policy Changes</h2>
+            <p>This privacy policy may be updated as needed. Any significant changes will be announced on this website.</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn btn-secondary">
+                <span class="btn-icon">←</span>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mojosoft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

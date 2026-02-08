@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - RocketWhisper for Linux</title>
+    <meta name="description" content="Help page for RocketWhisper Linux. Installation instructions, usage guide, and troubleshooting.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        .help-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 20px 60px;
+        }
+        .help-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .help-section h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .help-section h3 {
+            margin: 25px 0 15px;
+            color: var(--primary-color);
+        }
+        .help-section p, .help-section li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        .help-section ul, .help-section ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+        .help-section code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .code-block code {
+            color: var(--success-color);
+            background: none;
+            padding: 0;
+        }
+        .tip-box {
+            background: rgba(74, 144, 217, 0.1);
+            border: 1px solid rgba(74, 144, 217, 0.3);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .tip-box::before {
+            content: "💡 ";
+        }
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .warning-box::before {
+            content: "⚠️ ";
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .help-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .help-table th, .help-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        .help-table th {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .help-table td {
+            color: var(--text-secondary);
+        }
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .toc h2 {
+            margin-bottom: 15px;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toc a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="aurora"></div>
+
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">RocketWhisper <span class="linux-badge">Linux</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="index.html#specs">Requirements</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="../help.html">&#x1F1EF;&#x1F1F5; Japanese</a></li>
+            </ul>
+            <button class="nav-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="help-container">
+        <h1 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">
+            <span style="margin-right: 10px;">📖</span>Help
+        </h1>
+
+        <div class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#install">1. Installation</a></li>
+                <li><a href="#packages">2. Required Packages</a></li>
+                <li><a href="#first-run">3. First Launch</a></li>
+                <li><a href="#hotkeys">4. Hotkeys</a></li>
+                <li><a href="#models">5. Whisper Models</a></li>
+                <li><a href="#ai-command">6. AI Command Mode</a></li>
+                <li><a href="#voice-search">7. Voice Search</a></li>
+                <li><a href="#voice-launcher">8. Voice Launcher</a></li>
+                <li><a href="#app-modes">9. Per-App Processing Modes</a></li>
+                <li><a href="#wayland">10. Wayland Environment</a></li>
+                <li><a href="#cuda">11. CUDA/GPU Setup</a></li>
+                <li><a href="#troubleshooting">12. Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <section id="install" class="help-section">
+            <h2><span>📦</span> 1. Installation</h2>
+
+            <h3>Running the AppImage</h3>
+            <p>RocketWhisper is distributed as an AppImage. No installation is needed -- just download and run.</p>
+
+            <div class="code-block">
+                <code># 1. Grant execute permission to the downloaded AppImage<br>
+chmod +x RocketWhisper-1.2.0-aarch64.AppImage<br><br>
+# 2. Run it<br>
+./RocketWhisper-1.2.0-aarch64.AppImage</code>
+            </div>
+
+            <h3>Environments Without FUSE</h3>
+            <p>AppImages use FUSE. If FUSE is not installed on your system, you can extract and run it as follows:</p>
+
+            <div class="code-block">
+                <code># Install FUSE<br>
+sudo apt install fuse libfuse2<br><br>
+# Or extract and run<br>
+./RocketWhisper-1.2.0-aarch64.AppImage --appimage-extract<br>
+./squashfs-root/AppRun</code>
+            </div>
+        </section>
+
+        <section id="packages" class="help-section">
+            <h2><span>📋</span> 2. Required Packages</h2>
+
+            <p>The following packages are required to use RocketWhisper:</p>
+
+            <h3>Ubuntu / Debian / Linux Mint / Pop!_OS</h3>
+            <div class="code-block">
+                <code>sudo apt install pulseaudio-utils xdotool xclip ffmpeg</code>
+            </div>
+
+            <h3>Fedora</h3>
+            <div class="code-block">
+                <code>sudo dnf install pulseaudio-utils xdotool xclip ffmpeg</code>
+            </div>
+
+            <h3>Arch Linux</h3>
+            <div class="code-block">
+                <code>sudo pacman -S pulseaudio xdotool xclip ffmpeg</code>
+            </div>
+
+            <h3>Package Details</h3>
+            <div class="table-container">
+                <table class="help-table">
+                    <tr>
+                        <th>Package</th>
+                        <th>Purpose</th>
+                        <th>Required</th>
+                    </tr>
+                    <tr>
+                        <td><code>pulseaudio-utils</code></td>
+                        <td>Microphone recording (parec command)</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td><code>xdotool</code></td>
+                        <td>Keyboard automation / window detection</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td><code>xclip</code></td>
+                        <td>Clipboard access</td>
+                        <td>Required</td>
+                    </tr>
+                    <tr>
+                        <td><code>ffmpeg</code></td>
+                        <td>Audio file conversion</td>
+                        <td>Optional</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                Verify installation: <code>which parec xdotool xclip</code>
+            </div>
+        </section>
+
+        <section id="first-run" class="help-section">
+            <h2><span>🚀</span> 3. First Launch</h2>
+
+            <p>On first launch, RocketWhisper will automatically download the Whisper model.</p>
+
+            <ol>
+                <li>Run the AppImage</li>
+                <li>The initial setup screen appears</li>
+                <li>Select a model (recommended: large-v3-turbo)</li>
+                <li>Wait for the model download to complete</li>
+                <li>Once download finishes, the main window appears</li>
+            </ol>
+
+            <div class="tip-box">
+                Models are saved to <code>~/.local/share/RocketWhisper/Models/</code>.
+            </div>
+        </section>
+
+        <section id="hotkeys" class="help-section">
+            <h2><span>⌨️</span> 4. Hotkeys</h2>
+
+            <h3>Default Hotkeys</h3>
+            <div class="table-container">
+                <table class="help-table">
+                    <tr>
+                        <th>Function</th>
+                        <th>Hotkey</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>Start/Stop Recording</td>
+                        <td><code>F8</code></td>
+                        <td>Press to talk. Press again to recognize.</td>
+                    </tr>
+                    <tr>
+                        <td>Cancel</td>
+                        <td><code>Escape</code></td>
+                        <td>Cancel recording</td>
+                    </tr>
+                    <tr>
+                        <td>AI Command</td>
+                        <td><code>Ctrl + Shift + Space</code></td>
+                        <td>AI processing on selected text</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>Changing Hotkeys</h3>
+            <p>Go to Settings (gear icon) &rarr; "Hotkeys" tab to change hotkeys.</p>
+            <p>Click the text box and press the desired key combination to set it.</p>
+        </section>
+
+        <section id="models" class="help-section">
+            <h2><span>🧠</span> 5. Whisper Models</h2>
+
+            <div class="table-container">
+                <table class="help-table">
+                    <tr>
+                        <th>Model</th>
+                        <th>Size</th>
+                        <th>Accuracy</th>
+                        <th>Speed</th>
+                        <th>Recommended RAM</th>
+                    </tr>
+                    <tr>
+                        <td>small</td>
+                        <td>466MB</td>
+                        <td>Medium</td>
+                        <td>Normal</td>
+                        <td>8GB</td>
+                    </tr>
+                    <tr>
+                        <td>medium</td>
+                        <td>1.5GB</td>
+                        <td>High</td>
+                        <td>Somewhat slow</td>
+                        <td>8GB</td>
+                    </tr>
+                    <tr>
+                        <td>large-v3-turbo</td>
+                        <td>1.6GB</td>
+                        <td>High</td>
+                        <td>Fast</td>
+                        <td>8GB</td>
+                    </tr>
+                    <tr>
+                        <td>large-v3</td>
+                        <td>2.9GB</td>
+                        <td>Highest</td>
+                        <td>Slow</td>
+                        <td>16GB</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                <strong>Recommended:</strong> large-v3-turbo offers the best balance of accuracy and speed for most environments.
+            </div>
+        </section>
+
+        <section id="ai-command" class="help-section">
+            <h2><span>🤖</span> 6. AI Command Mode</h2>
+
+            <p>Give voice instructions to perform AI processing on selected text.</p>
+
+            <h3>How to Use</h3>
+            <ol>
+                <li>Select text in any application</li>
+                <li>Press the AI Command hotkey (<code>Ctrl + Shift + Space</code>)</li>
+                <li>Speak your instruction (e.g., "Translate to Japanese", "Summarize this")</li>
+                <li>Press the hotkey again to execute</li>
+                <li>Results are displayed in the RocketWhisper window</li>
+            </ol>
+
+            <h3>Setting Up an AI Provider</h3>
+            <p>To use AI Command Mode, you need to configure an AI provider in Settings:</p>
+            <ul>
+                <li>OpenAI (GPT-4, GPT-3.5)</li>
+                <li>Anthropic (Claude)</li>
+                <li>Google Gemini</li>
+                <li>Groq (LLaMA)</li>
+                <li>OpenAI-compatible API (local LLMs, etc.)</li>
+            </ul>
+
+            <div class="warning-box">
+                AI Command Mode requires an API key from an AI provider. Configure it in Settings &rarr; "AI Processing" tab.
+            </div>
+        </section>
+
+        <section id="voice-search" class="help-section">
+            <h2><span>🔍</span> 7. Voice Search</h2>
+
+            <p>When specific phrases are recognized, a browser search is automatically performed.</p>
+
+            <h3>Supported Phrases</h3>
+            <ul>
+                <li>"Search for ..."</li>
+                <li>"Look up ..."</li>
+                <li>"Google ..."</li>
+                <li>"What is ...?"</li>
+            </ul>
+
+            <h3>Settings</h3>
+            <p>Enable or disable this feature in Settings &rarr; "Voice Launcher &amp; Search" tab.</p>
+        </section>
+
+        <section id="voice-launcher" class="help-section">
+            <h2><span>🚀</span> 8. Voice Launcher</h2>
+
+            <p>Launch applications by speaking specific keywords.</p>
+
+            <h3>Setup</h3>
+            <ol>
+                <li>Go to Settings &rarr; "Voice Launcher &amp; Search" tab</li>
+                <li>Click the "Add" button</li>
+                <li>Enter a keyword (e.g., "open terminal")</li>
+                <li>Enter the executable path (e.g., <code>/usr/bin/gnome-terminal</code>)</li>
+                <li>Click Save</li>
+            </ol>
+
+            <div class="tip-box">
+                You can also use the "Browse..." button to select a file.
+            </div>
+        </section>
+
+        <section id="app-modes" class="help-section">
+            <h2><span>🎯</span> 9. Per-App Processing Modes</h2>
+
+            <p>Automatically apply different settings for each application.</p>
+
+            <h3>Preset Modes</h3>
+            <ul>
+                <li><strong>Smart:</strong> Auto punctuation + auto correction</li>
+                <li><strong>Simple:</strong> Output recognition results as-is</li>
+                <li><strong>Command:</strong> Voice commands enabled</li>
+            </ul>
+
+            <h3>App Mapping</h3>
+            <ol>
+                <li>Go to Settings &rarr; "Per-App Processing" tab</li>
+                <li>Click "Get Current App" (have the target app in the foreground)</li>
+                <li>Select the mode to use</li>
+                <li>Click Save</li>
+            </ol>
+        </section>
+
+        <section id="wayland" class="help-section">
+            <h2><span>⚠️</span> 10. Wayland Environment</h2>
+
+            <p>Some features are limited under Wayland.</p>
+
+            <h3>Limitations</h3>
+            <ul>
+                <li>Global hotkeys: <code>ydotool</code> required, may need root privileges</li>
+                <li>Auto paste: <code>wl-clipboard</code> required</li>
+                <li>AI Command Mode: Affected by clipboard restrictions</li>
+                <li>Per-app processing: Limited window detection</li>
+            </ul>
+
+            <h3>Additional Packages</h3>
+            <div class="code-block">
+                <code>sudo apt install ydotool wl-clipboard</code>
+            </div>
+
+            <div class="tip-box">
+                For full functionality, select an "Xorg" or "X11" session at login.
+            </div>
+
+            <h3>Checking Your Session</h3>
+            <div class="code-block">
+                <code>echo $XDG_SESSION_TYPE<br>
+# "x11" means X11 environment<br>
+# "wayland" means Wayland environment</code>
+            </div>
+        </section>
+
+        <section id="cuda" class="help-section">
+            <h2><span>🎮</span> 11. CUDA/GPU Setup</h2>
+
+            <p>CUDA acceleration is automatically enabled on systems with NVIDIA GPUs.</p>
+
+            <h3>Supported GPUs</h3>
+            <ul>
+                <li>NVIDIA DGX Spark (Blackwell) - Optimized</li>
+                <li>Jetson AGX Orin (Ampere)</li>
+                <li>Jetson Orin NX/Nano (Ampere)</li>
+            </ul>
+
+            <h3>Verification</h3>
+            <div class="code-block">
+                <code># Check if NVIDIA driver is recognized<br>
+nvidia-smi<br><br>
+# Check CUDA version<br>
+nvcc --version</code>
+            </div>
+
+            <div class="tip-box">
+                CUDA 12.0 or later is required. If no GPU is available, the app automatically falls back to CPU.
+            </div>
+        </section>
+
+        <section id="troubleshooting" class="help-section">
+            <h2><span>🔧</span> 12. Troubleshooting</h2>
+
+            <h3>Microphone Not Detected</h3>
+            <div class="code-block">
+                <code># List PulseAudio sources (input devices)<br>
+pactl list sources short<br><br>
+# Recording test<br>
+parec --device=0 --rate=16000 --channels=1 --format=s16le | head -c 160000 > test.raw</code>
+            </div>
+
+            <h3>Hotkey Not Responding</h3>
+            <div class="code-block">
+                <code># Test xdotool<br>
+xdotool getactivewindow<br><br>
+# Check if running in X11 session<br>
+echo $XDG_SESSION_TYPE</code>
+            </div>
+
+            <h3>AppImage Won't Start</h3>
+            <div class="code-block">
+                <code># Install FUSE<br>
+sudo apt install fuse libfuse2<br><br>
+# Or extract and run<br>
+./RocketWhisper-*.AppImage --appimage-extract<br>
+./squashfs-root/AppRun</code>
+            </div>
+
+            <h3>Garbled Characters</h3>
+            <div class="code-block">
+                <code># Install CJK fonts<br>
+sudo apt install fonts-noto-cjk</code>
+            </div>
+
+            <h3>Configuration File Locations</h3>
+            <div class="code-block">
+                <code>~/.config/RocketWhisper/<br>
+├── settings.json          # App settings<br>
+├── modes.json             # Processing mode settings<br>
+├── mappings.json          # Per-app mappings<br>
+├── voice_launcher.json    # Voice launcher settings<br>
+└── correction_rules.json  # Correction rules</code>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn btn-secondary">
+                <span class="btn-icon">←</span>
+                Back to Home
+            </a>
+            <a href="support.html" class="btn btn-primary">
+                <span class="btn-icon">💬</span>
+                Contact Support
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mojosoft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
