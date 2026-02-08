@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>!function(){var l=localStorage.getItem("rw-lang");if("en"!==l&&"ja"===l){var p=location.pathname.split("/").pop()||"index.html";location.replace("../"+p+location.hash)}}();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RocketWhisper for Linux - Local AI Speech Recognition App</title>
     <meta name="description" content="RocketWhisper for Linux is a high-accuracy speech recognition app that works completely offline. Supports Ubuntu, Debian, Fedora. CUDA acceleration with NVIDIA GPUs (DGX Spark, Jetson).">
@@ -40,7 +41,7 @@
                 <li><a href="purchase.html" class="nav-btn-purchase">Purchase</a></li>
                 <li><a href="https://mojosoftjp.github.io/rocketwhisper/" class="nav-btn-windows">Windows</a></li>
                 <li><a href="https://mojosoftjp.github.io/rocketwhisper-mac/" class="nav-btn-windows">Mac</a></li>
-                <li><a href="../index.html">&#x1F1EF;&#x1F1F5; Japanese</a></li>
+                <li><a href="../index.html" onclick="localStorage.setItem('rw-lang','ja')">&#x1F1EF;&#x1F1F5; Japanese</a></li>
             </ul>
             <button class="nav-toggle">☰</button>
         </div>
