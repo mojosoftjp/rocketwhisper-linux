@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <script>!function(){var l=localStorage.getItem("rw-lang");if("ja"!==l&&("en"===l||!(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("en/"+p+location.hash)}}();</script>
+    <script>!function(){var l=sessionStorage.getItem("rw-lang");if("ja"!==l&&("en"===l||!(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("en/"+p+location.hash)}}();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ヘルプ - RocketWhisper Linux版</title>
     <meta name="description" content="RocketWhisper Linux版のヘルプページ。インストール方法、使い方、トラブルシューティングを解説。">
@@ -144,7 +144,7 @@
                 <li><a href="index.html#download">ダウンロード</a></li>
                 <li><a href="index.html#specs">動作環境</a></li>
                 <li><a href="help.html">ヘルプ</a></li>
-                <li><a href="en/help.html" onclick="localStorage.setItem('rw-lang','en')">&#x1F1EC;&#x1F1E7; English</a></li>
+                <li><a href="en/help.html" onclick="sessionStorage.setItem('rw-lang','en')">&#x1F1EC;&#x1F1E7; English</a></li>
             </ul>
             <button class="nav-toggle">☰</button>
         </div>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script>!function(){var l=localStorage.getItem("rw-lang");if("en"!==l&&("ja"===l||(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("../"+p+location.hash)}}();</script>
+    <script>!function(){var l=sessionStorage.getItem("rw-lang");if("en"!==l&&("ja"===l||(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("../"+p+location.hash)}}();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Purchase a RocketWhisper Linux license - AI speech recognition app license purchase">
     <meta name="keywords" content="RocketWhisper, Linux, license, purchase, speech recognition">
@@ -603,7 +603,7 @@
                 <li><a href="purchase.html" class="nav-btn-purchase">Purchase</a></li>
                 <li><a href="https://mojosoftjp.github.io/rocketwhisper/" class="nav-btn-windows">Windows</a></li>
                 <li><a href="https://mojosoftjp.github.io/rocketwhisper-mac/" class="nav-btn-windows">Mac</a></li>
-                <li><a href="../purchase.html" onclick="localStorage.setItem('rw-lang','ja')">&#x1F1EF;&#x1F1F5; Japanese</a></li>
+                <li><a href="../purchase.html" onclick="sessionStorage.setItem('rw-lang','ja')">&#x1F1EF;&#x1F1F5; Japanese</a></li>
             </ul>
             <button class="nav-toggle">☰</button>
         </div>

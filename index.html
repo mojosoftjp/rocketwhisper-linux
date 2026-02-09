@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <script>!function(){var l=localStorage.getItem("rw-lang");if("ja"!==l&&("en"===l||!(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("en/"+p+location.hash)}}();</script>
+    <script>!function(){var l=sessionStorage.getItem("rw-lang");if("ja"!==l&&("en"===l||!(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("en/"+p+location.hash)}}();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RocketWhisper Linux版 - ローカルAI音声認識アプリ</title>
     <meta name="description" content="RocketWhisper Linux版は、完全オフラインで動作する高精度音声認識アプリです。Ubuntu、Debian、Fedora対応。NVIDIA GPU (DGX Spark, Jetson) でCUDA加速。">
@@ -38,7 +38,7 @@
                 <li><a href="purchase.html" class="nav-btn-purchase">購入</a></li>
                 <li><a href="https://mojosoftjp.github.io/rocketwhisper/" class="nav-btn-windows">Windows版</a></li>
                 <li><a href="https://mojosoftjp.github.io/rocketwhisper-mac/" class="nav-btn-windows">Mac版</a></li>
-                <li><a href="en/index.html" onclick="localStorage.setItem('rw-lang','en')">&#x1F1EC;&#x1F1E7; English</a></li>
+                <li><a href="en/index.html" onclick="sessionStorage.setItem('rw-lang','en')">&#x1F1EC;&#x1F1E7; English</a></li>
             </ul>
             <button class="nav-toggle">☰</button>
         </div>
