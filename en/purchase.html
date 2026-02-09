@@ -622,7 +622,7 @@
                 <!-- Personal -->
                 <div class="pricing-card">
                     <h3>Personal</h3>
-                    <div class="price">¥4,800<span>/1 PC (excl. tax)</span></div>
+                    <div class="price">$39.99<span>/per PC</span></div>
                     <p class="description">For individual use and freelancers. Valid for 1 PC.</p>
                     <ul>
                         <li>
@@ -672,7 +672,7 @@
                 <!-- Business -->
                 <div class="pricing-card">
                     <h3>Business</h3>
-                    <div class="price">¥59,800<span>/unlimited (excl. tax)</span></div>
+                    <div class="price">$299.99<span>/unlimited PCs</span></div>
                     <p class="description">For companies and teams. Unlimited PCs within the same organization.</p>
                     <ul>
                         <li>
@@ -996,7 +996,7 @@
     </footer>
 
     <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AQW_pNfSyvlWxHshLEfmnSzEq85x3im5k-2Khrpns2wh7XV2yp5oYYkwb1_8-8fT2U6fnVIX4xlrTvgO&currency=JPY&locale=ja_JP"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AQW_pNfSyvlWxHshLEfmnSzEq85x3im5k-2Khrpns2wh7XV2yp5oYYkwb1_8-8fT2U6fnVIX4xlrTvgO&currency=USD"></script>
     <script>
         // Show success modal
         function showSuccessModal(product, amount, email, hardwareId) {
@@ -1084,12 +1084,12 @@
                         purchase_units: [{
                             description: 'RocketWhisper Personal License [HW:' + hardwareId + ']',
                             amount: {
-                                currency_code: 'JPY',
-                                value: '4800',
+                                currency_code: 'USD',
+                                value: '39.99',
                                 breakdown: {
                                     item_total: {
-                                        currency_code: 'JPY',
-                                        value: '4800'
+                                        currency_code: 'USD',
+                                        value: '39.99'
                                     }
                                 }
                             },
@@ -1097,8 +1097,8 @@
                                 name: 'RocketWhisper Personal License',
                                 sku: 'MJ010',
                                 unit_amount: {
-                                    currency_code: 'JPY',
-                                    value: '4800'
+                                    currency_code: 'USD',
+                                    value: '39.99'
                                 },
                                 quantity: '1',
                                 description: 'HW:' + hardwareId
@@ -1114,7 +1114,7 @@
 
                         showSuccessModal(
                             'RocketWhisper Personal',
-                            '¥4,800 (excl. tax)',
+                            '$39.99',
                             details.payer.email_address,
                             hardwareId
                         );
@@ -1148,12 +1148,12 @@
                         purchase_units: [{
                             description: description,
                             amount: {
-                                currency_code: 'JPY',
-                                value: '59800',
+                                currency_code: 'USD',
+                                value: '299.99',
                                 breakdown: {
                                     item_total: {
-                                        currency_code: 'JPY',
-                                        value: '59800'
+                                        currency_code: 'USD',
+                                        value: '299.99'
                                     }
                                 }
                             },
@@ -1161,8 +1161,8 @@
                                 name: 'RocketWhisper Business License (Unlimited PCs)',
                                 sku: 'MJ011',
                                 unit_amount: {
-                                    currency_code: 'JPY',
-                                    value: '59800'
+                                    currency_code: 'USD',
+                                    value: '299.99'
                                 },
                                 quantity: '1',
                                 description: hardwareId ? 'HW:' + hardwareId : 'Unlimited PCs'
@@ -1178,7 +1178,7 @@
 
                         showSuccessModal(
                             'RocketWhisper Business (Unlimited PCs)',
-                            '¥59,800 (excl. tax)',
+                            '$299.99',
                             details.payer.email_address,
                             hardwareId || null
                         );
