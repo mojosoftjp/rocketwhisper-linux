@@ -164,13 +164,16 @@
                 <li><a href="#first-run">3. First Launch</a></li>
                 <li><a href="#hotkeys">4. Hotkeys</a></li>
                 <li><a href="#models">5. Whisper Models</a></li>
-                <li><a href="#ai-command">6. AI Command Mode</a></li>
-                <li><a href="#voice-search">7. Voice Search</a></li>
-                <li><a href="#voice-launcher">8. Voice Launcher</a></li>
-                <li><a href="#app-modes">9. Per-App Processing Modes</a></li>
-                <li><a href="#wayland">10. Wayland Environment</a></li>
-                <li><a href="#cuda">11. CUDA/GPU Setup</a></li>
-                <li><a href="#troubleshooting">12. Troubleshooting</a></li>
+                <li><a href="#batch">6. Batch Processing (Video Support)</a></li>
+                <li><a href="#custom-instructions">7. Custom Instructions</a></li>
+                <li><a href="#history">8. Recognition History</a></li>
+                <li><a href="#ai-command">9. AI Command Mode</a></li>
+                <li><a href="#voice-search">10. Voice Search</a></li>
+                <li><a href="#voice-launcher">11. Voice Launcher</a></li>
+                <li><a href="#app-modes">12. Per-App Processing Modes</a></li>
+                <li><a href="#wayland">13. Wayland Environment</a></li>
+                <li><a href="#cuda">14. CUDA/GPU Setup</a></li>
+                <li><a href="#troubleshooting">15. Troubleshooting</a></li>
             </ul>
         </div>
 
@@ -355,8 +358,75 @@ sudo apt install fuse libfuse2<br><br>
             </div>
         </section>
 
+        <section id="batch" class="help-section">
+            <h2><span>📁</span> 6. Batch Processing (Video Support)</h2>
+
+            <p>Transcribe multiple audio and video files at once. Video files are automatically processed by extracting audio with FFmpeg.</p>
+
+            <h3>Supported Formats</h3>
+            <ul>
+                <li><strong>Audio input</strong>: WAV, MP3, FLAC, OGG, M4A, WMA</li>
+                <li><strong>Video input</strong>: MP4, MKV, AVI, MOV, WebM, WMV, FLV</li>
+                <li><strong>Text output</strong>: TXT, SRT subtitles, VTT subtitles</li>
+            </ul>
+
+            <h3>How to Use</h3>
+            <ol>
+                <li>Click the "Batch Processing" button in the main window</li>
+                <li>Add files (drag and drop supported)</li>
+                <li>Select output format (Text / SRT subtitles / VTT subtitles)</li>
+                <li>Click "Start Processing"</li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> FFmpeg is required for video file transcription. Install it with <code>sudo apt install ffmpeg</code>.
+            </div>
+        </section>
+
+        <section id="custom-instructions" class="help-section">
+            <h2><span>✨</span> 7. Custom Instructions</h2>
+
+            <p>Process recognized text with any AI prompt you define. Set up custom instructions for meeting minutes, translation, summarization, and more.</p>
+
+            <h3>How to Use</h3>
+            <ol>
+                <li>Configure an AI provider in Settings → "AI Processing" tab</li>
+                <li>Enter your custom prompt in the "Custom Instructions" field (e.g., "Format as meeting minutes")</li>
+                <li>Use the Custom Instructions hotkey to record → when stopped, the recognized text is processed by AI</li>
+            </ol>
+
+            <h3>Use Cases</h3>
+            <ul>
+                <li>"Translate Japanese to English" → Output speech as translated text</li>
+                <li>"Format as meeting minutes" → Structure speech into meeting notes</li>
+                <li>"Summarize in bullet points" → Condense long speech into key points</li>
+                <li>"Convert to formal language" → Transform casual speech into business writing</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>Tip:</strong> Use a local LLM (Ollama, etc.) for completely offline and free custom instructions.
+            </div>
+        </section>
+
+        <section id="history" class="help-section">
+            <h2><span>📜</span> 8. Recognition History</h2>
+
+            <p>All recognition results are automatically saved and can be searched, copied, and reused at any time.</p>
+
+            <h3>Features</h3>
+            <ul>
+                <li><strong>Auto-save</strong>: Recognition results are automatically saved to history</li>
+                <li><strong>Search</strong>: Search past recognition results by keyword</li>
+                <li><strong>Copy</strong>: Copy text from history for reuse</li>
+                <li><strong>Timestamps</strong>: See when each recognition was made</li>
+            </ul>
+
+            <h3>How to Use</h3>
+            <p>Click the "History" button in the main window to open the recognition history window.</p>
+        </section>
+
         <section id="ai-command" class="help-section">
-            <h2><span>🤖</span> 6. AI Command Mode</h2>
+            <h2><span>🤖</span> 9. AI Command Mode</h2>
 
             <p>Give voice instructions to perform AI processing on selected text.</p>
 
@@ -385,7 +455,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="voice-search" class="help-section">
-            <h2><span>🔍</span> 7. Voice Search</h2>
+            <h2><span>🔍</span> 10. Voice Search</h2>
 
             <p>When specific phrases are recognized, a browser search is automatically performed.</p>
 
@@ -402,7 +472,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="voice-launcher" class="help-section">
-            <h2><span>🚀</span> 8. Voice Launcher</h2>
+            <h2><span>🚀</span> 11. Voice Launcher</h2>
 
             <p>Launch applications by speaking specific keywords.</p>
 
@@ -421,7 +491,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="app-modes" class="help-section">
-            <h2><span>🎯</span> 9. Per-App Processing Modes</h2>
+            <h2><span>🎯</span> 12. Per-App Processing Modes</h2>
 
             <p>Automatically apply different settings for each application.</p>
 
@@ -442,7 +512,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="wayland" class="help-section">
-            <h2><span>⚠️</span> 10. Wayland Environment</h2>
+            <h2><span>⚠️</span> 13. Wayland Environment</h2>
 
             <p>Some features are limited under Wayland.</p>
 
@@ -472,7 +542,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="cuda" class="help-section">
-            <h2><span>🎮</span> 11. CUDA/GPU Setup</h2>
+            <h2><span>🎮</span> 14. CUDA/GPU Setup</h2>
 
             <p>CUDA acceleration is automatically enabled on systems with NVIDIA GPUs.</p>
 
@@ -497,7 +567,7 @@ nvcc --version</code>
         </section>
 
         <section id="troubleshooting" class="help-section">
-            <h2><span>🔧</span> 12. Troubleshooting</h2>
+            <h2><span>🔧</span> 15. Troubleshooting</h2>
 
             <h3>Microphone Not Detected</h3>
             <div class="code-block">

@@ -163,13 +163,16 @@
                 <li><a href="#first-run">3. 初回起動</a></li>
                 <li><a href="#hotkeys">4. ホットキー</a></li>
                 <li><a href="#models">5. Whisperモデル</a></li>
-                <li><a href="#ai-command">6. AIコマンドモード</a></li>
-                <li><a href="#voice-search">7. 音声検索</a></li>
-                <li><a href="#voice-launcher">8. 音声ランチャー</a></li>
-                <li><a href="#app-modes">9. アプリ別処理モード</a></li>
-                <li><a href="#wayland">10. Wayland環境</a></li>
-                <li><a href="#cuda">11. CUDA/GPU設定</a></li>
-                <li><a href="#troubleshooting">12. トラブルシューティング</a></li>
+                <li><a href="#batch">6. バッチ処理（動画対応）</a></li>
+                <li><a href="#custom-instructions">7. カスタム指示</a></li>
+                <li><a href="#history">8. 認識履歴</a></li>
+                <li><a href="#ai-command">9. AIコマンドモード</a></li>
+                <li><a href="#voice-search">10. 音声検索</a></li>
+                <li><a href="#voice-launcher">11. 音声ランチャー</a></li>
+                <li><a href="#app-modes">12. アプリ別処理モード</a></li>
+                <li><a href="#wayland">13. Wayland環境</a></li>
+                <li><a href="#cuda">14. CUDA/GPU設定</a></li>
+                <li><a href="#troubleshooting">15. トラブルシューティング</a></li>
             </ul>
         </div>
 
@@ -354,8 +357,75 @@ sudo apt install fuse libfuse2<br><br>
             </div>
         </section>
 
+        <section id="batch" class="help-section">
+            <h2><span>📁</span> 6. バッチ処理（動画対応）</h2>
+
+            <p>複数の音声ファイルや動画ファイルを一括で文字起こしできます。動画ファイルはFFmpegで音声を自動抽出して処理します。</p>
+
+            <h3>対応フォーマット</h3>
+            <ul>
+                <li><strong>音声入力</strong>: WAV, MP3, FLAC, OGG, M4A, WMA</li>
+                <li><strong>動画入力</strong>: MP4, MKV, AVI, MOV, WebM, WMV, FLV</li>
+                <li><strong>テキスト出力</strong>: TXT, SRT字幕, VTT字幕</li>
+            </ul>
+
+            <h3>使い方</h3>
+            <ol>
+                <li>メインウィンドウの「バッチ処理」ボタンをクリック</li>
+                <li>ファイルを追加（ドラッグ＆ドロップも可）</li>
+                <li>出力形式（テキスト/SRT字幕/VTT字幕）を選択</li>
+                <li>「処理開始」をクリック</li>
+            </ol>
+
+            <div class="tip-box">
+                <strong>ヒント:</strong> 動画ファイルの文字起こしにはFFmpegが必要です。<code>sudo apt install ffmpeg</code> でインストールしてください。
+            </div>
+        </section>
+
+        <section id="custom-instructions" class="help-section">
+            <h2><span>✨</span> 7. カスタム指示</h2>
+
+            <p>認識テキストをAIに自由なプロンプトで処理させる機能です。議事録作成、翻訳、要約など、用途に合わせた指示を設定できます。</p>
+
+            <h3>使い方</h3>
+            <ol>
+                <li>設定画面の「AI処理」タブでプロバイダを設定</li>
+                <li>「カスタム指示」欄に自由なプロンプトを入力（例：「議事録形式にまとめて」）</li>
+                <li>カスタム指示のホットキーで録音 → 停止すると、認識テキストがAIで処理されます</li>
+            </ol>
+
+            <h3>活用例</h3>
+            <ul>
+                <li>「日本語を英語に翻訳して」 → 音声を翻訳テキストとして出力</li>
+                <li>「議事録形式にまとめて」 → 発言を議事録に整形</li>
+                <li>「箇条書きで要約して」 → 長い発言を簡潔に要約</li>
+                <li>「敬語に変換して」 → カジュアルな発言をビジネス文体に変換</li>
+            </ul>
+
+            <div class="tip-box">
+                <strong>ヒント:</strong> ローカルLLM（Ollama等）を使えば、完全オフライン・完全無料でカスタム指示を利用できます。
+            </div>
+        </section>
+
+        <section id="history" class="help-section">
+            <h2><span>📜</span> 8. 認識履歴</h2>
+
+            <p>過去の認識結果が自動的に保存され、いつでも検索・コピー・再利用できます。</p>
+
+            <h3>機能</h3>
+            <ul>
+                <li><strong>自動保存</strong>: 認識結果は自動的に履歴に保存されます</li>
+                <li><strong>検索</strong>: キーワードで過去の認識結果を検索</li>
+                <li><strong>コピー</strong>: 履歴からテキストをコピーして再利用</li>
+                <li><strong>日時表示</strong>: いつ認識したかを日時で確認</li>
+            </ul>
+
+            <h3>使い方</h3>
+            <p>メインウィンドウの「履歴」ボタンをクリックすると、認識履歴ウィンドウが開きます。</p>
+        </section>
+
         <section id="ai-command" class="help-section">
-            <h2><span>🤖</span> 6. AIコマンドモード</h2>
+            <h2><span>🤖</span> 9. AIコマンドモード</h2>
 
             <p>選択したテキストに対して、音声で指示を出してAI処理を行う機能です。</p>
 
@@ -384,7 +454,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="voice-search" class="help-section">
-            <h2><span>🔍</span> 7. 音声検索</h2>
+            <h2><span>🔍</span> 10. 音声検索</h2>
 
             <p>特定のフレーズを認識すると、自動でブラウザ検索を実行します。</p>
 
@@ -403,7 +473,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="voice-launcher" class="help-section">
-            <h2><span>🚀</span> 8. 音声ランチャー</h2>
+            <h2><span>🚀</span> 11. 音声ランチャー</h2>
 
             <p>特定のキーワードを話すと、対応するアプリケーションを起動できます。</p>
 
@@ -422,7 +492,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="app-modes" class="help-section">
-            <h2><span>🎯</span> 9. アプリ別処理モード</h2>
+            <h2><span>🎯</span> 12. アプリ別処理モード</h2>
 
             <p>アプリケーションごとに異なる設定を自動適用できます。</p>
 
@@ -443,7 +513,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="wayland" class="help-section">
-            <h2><span>⚠️</span> 10. Wayland環境</h2>
+            <h2><span>⚠️</span> 13. Wayland環境</h2>
 
             <p>Waylandでは一部機能に制限があります。</p>
 
@@ -473,7 +543,7 @@ sudo apt install fuse libfuse2<br><br>
         </section>
 
         <section id="cuda" class="help-section">
-            <h2><span>🎮</span> 11. CUDA/GPU設定</h2>
+            <h2><span>🎮</span> 14. CUDA/GPU設定</h2>
 
             <p>NVIDIA GPU搭載環境では、自動的にCUDA加速が有効になります。</p>
 
@@ -498,7 +568,7 @@ nvcc --version</code>
         </section>
 
         <section id="troubleshooting" class="help-section">
-            <h2><span>🔧</span> 12. トラブルシューティング</h2>
+            <h2><span>🔧</span> 15. トラブルシューティング</h2>
 
             <h3>マイクが認識されない</h3>
             <div class="code-block">
