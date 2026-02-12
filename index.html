@@ -4,12 +4,51 @@
     <meta charset="UTF-8">
     <script>!function(){var l=sessionStorage.getItem("rw-lang");if("ja"!==l&&("en"===l||!(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("en/"+p+location.hash)}}();</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RocketWhisper Linux版 - ローカルAI音声認識アプリ</title>
-    <meta name="description" content="RocketWhisper Linux版は、完全オフラインで動作する高精度音声認識アプリです。Ubuntu、Debian、Fedora対応。NVIDIA GPU (DGX Spark, Jetson) でCUDA加速。">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <title>RocketWhisper Linux版 - AI音声認識・文字起こしソフト | オフライン対応・買い切り</title>
+    <meta name="description" content="RocketWhisper Linux版は完全オフラインで動作するAI音声認識・文字起こしソフトです。OpenAI Whisper搭載で高精度。Ubuntu、Debian、Fedora対応。NVIDIA GPU(CUDA/DGX Spark)で爆速認識。会議の議事録作成、動画の字幕生成に。月額不要の買い切りライセンス。">
+    <meta name="keywords" content="音声認識,文字起こし,Linux,Ubuntu,AI音声認識,Whisper,OpenAI Whisper,オフライン音声認識,ローカル音声認識,リアルタイム音声入力,会議 文字起こし,議事録作成,動画 文字起こし,字幕作成,SRT,VTT,NVIDIA CUDA,DGX Spark,GPU 音声認識,買い切り,月額不要,プライバシー保護,AppImage,Debian,Fedora,Linux 音声入力,Linux 文字起こし,音声認識ソフト,カスタム指示,バッチ処理,RocketWhisper">
+    <meta property="og:title" content="RocketWhisper Linux版 - AI音声認識・文字起こしソフト | オフライン・買い切り">
+    <meta property="og:description" content="Linux対応の完全オフラインAI音声認識ソフト。OpenAI Whisper搭載。NVIDIA CUDA/DGX Spark対応。会議の議事録、動画の字幕作成に。月額不要。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mojosoftjp.github.io/rocketwhisper-linux/">
+    <meta property="og:site_name" content="RocketWhisper">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="RocketWhisper Linux版 - AI音声認識・文字起こしソフト">
+    <meta name="twitter:description" content="Linux対応の完全オフラインAI音声認識ソフト。OpenAI Whisper搭載。NVIDIA CUDA対応。買い切り。">
+    <link rel="canonical" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
+    <link rel="alternate" hreflang="ja" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
+    <link rel="alternate" hreflang="en" href="https://mojosoftjp.github.io/rocketwhisper-linux/en/">
+    <link rel="alternate" hreflang="x-default" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "RocketWhisper Linux Edition",
+        "description": "Linux対応の完全オフラインAI音声認識・文字起こしソフト。OpenAI Whisper搭載。NVIDIA CUDA/DGX Spark対応。",
+        "url": "https://mojosoftjp.github.io/rocketwhisper-linux/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Linux (Ubuntu, Debian, Fedora)",
+        "offers": {
+            "@type": "Offer",
+            "price": "4800",
+            "priceCurrency": "JPY",
+            "description": "個人版ライセンス（買い切り・月額不要）"
+        },
+        "softwareVersion": "1.1.2",
+        "author": {
+            "@type": "Organization",
+            "name": "Mojosoft Co., Ltd."
+        },
+        "inLanguage": ["ja", "en"],
+        "featureList": "オフライン音声認識, リアルタイム文字起こし, NVIDIA CUDA GPU加速, 動画文字起こし, SRT/VTT字幕出力, AI処理, カスタム指示, バッチ処理, AppImage配布"
+    }
+    </script>
 </head>
 <body>
     <!-- Space Background Effects -->
@@ -56,8 +95,8 @@
                 <span class="hero-subtitle">Linux Edition</span>
             </h1>
             <p class="hero-description">
-                完全オフラインで動作する<br>
-                <strong>超高精度</strong>音声認識アプリ
+                完全オフライン・買い切りの<br>
+                <strong>AI音声認識・文字起こし</strong>ソフト
             </p>
             <div class="hero-features">
                 <div class="hero-feature">
@@ -819,6 +858,26 @@
                     <div class="faq-answer">
                         <span class="faq-icon">A</span>
                         <span>いいえ、そのまま実行できます。<code>chmod +x</code>で実行権限を付与すればOKです。FUSEがない環境では<code>--appimage-extract</code>で展開することもできます。</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>会議の議事録作成に使えますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span>はい、リアルタイム音声入力と録音ファイルからのバッチ処理の両方に対応しています。AI処理機能で文字起こし結果を自動的に要約・整形することも可能です。</span>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="faq-icon">Q</span>
+                        <span>動画ファイルの文字起こしや字幕作成はできますか？</span>
+                    </div>
+                    <div class="faq-answer">
+                        <span class="faq-icon">A</span>
+                        <span>はい、MP4・MKV・AVI・MOV・WebMなどの動画から直接文字起こしが可能です。SRT・VTT形式の字幕ファイル出力にも対応しています。</span>
                     </div>
                 </div>
             </div>
