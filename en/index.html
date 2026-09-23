@@ -102,14 +102,6 @@
   ]
 }
 </script>
-<style id="seo-navigation-style">
-.seo-navigation{max-width:1040px;margin:32px auto;padding:24px;line-height:1.8;border-top:1px solid #8886}
-.seo-navigation h2{font-size:1.2rem;margin:0 0 12px}.seo-navigation ul{padding-left:1.2em;display:flex;flex-wrap:wrap;gap:8px 28px}
-.seo-navigation a{text-decoration:underline;text-underline-offset:3px}.seo-navigation details{padding:12px 0;border-bottom:1px solid #8884}
-.seo-navigation summary{cursor:pointer;font-weight:600}.seo-navigation p{margin:10px 0}.seo-product-label{display:block;font-size:.35em;line-height:1.5;margin-bottom:.6em;letter-spacing:0}
-.seo-table-scroll{max-width:100%;overflow-x:auto;margin:16px 0}code{overflow-wrap:anywhere;word-break:break-word}
-@media(prefers-reduced-motion:reduce){.fade-in,.reveal,.reveal-scale,.rv{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
-</style><noscript><style>.fade-in,.reveal,.reveal-scale,.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
     <!-- Space Background Effects -->
@@ -570,7 +562,7 @@
             <div class="specs-grid">
                 <div class="spec-card">
                     <h3>📦 Supported Distributions</h3>
-                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="Product specifications and comparison"><table class="spec-table">
+                    <table class="spec-table">
                         <tr>
                             <td>Ubuntu</td>
                             <td>20.04 LTS or later</td>
@@ -595,11 +587,11 @@
                             <td>Arch Linux</td>
                             <td>Rolling</td>
                         </tr>
-                    </table></div>
+                    </table>
                 </div>
                 <div class="spec-card">
                     <h3>💻 Architecture</h3>
-                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="Product specifications and comparison"><table class="spec-table">
+                    <table class="spec-table">
                         <tr>
                             <td>ARM64 (aarch64)</td>
                             <td>✅ Recommended (DGX Spark, etc.)</td>
@@ -608,11 +600,11 @@
                             <td>x86_64 (AMD64)</td>
                             <td>✅ Supported</td>
                         </tr>
-                    </table></div>
+                    </table>
                 </div>
                 <div class="spec-card">
                     <h3>📋 Required Packages</h3>
-                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="Product specifications and comparison"><table class="spec-table">
+                    <table class="spec-table">
                         <tr>
                             <td><code>pulseaudio-utils</code></td>
                             <td>Microphone recording (parec)</td>
@@ -629,11 +621,11 @@
                             <td><code>ffmpeg</code></td>
                             <td>Audio conversion (optional)</td>
                         </tr>
-                    </table></div>
+                    </table>
                 </div>
                 <div class="spec-card">
                     <h3>🎮 CUDA-Compatible GPUs</h3>
-                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="Product specifications and comparison"><table class="spec-table">
+                    <table class="spec-table">
                         <tr>
                             <td>DGX Spark</td>
                             <td>Blackwell ✅ Optimized</td>
@@ -649,11 +641,11 @@
                         <tr>
                             <td colspan="2" class="note">Falls back to CPU when no GPU is present</td>
                         </tr>
-                    </table></div>
+                    </table>
                 </div>
                 <div class="spec-card">
                     <h3>⚠️ Display Server</h3>
-                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="Product specifications and comparison"><table class="spec-table">
+                    <table class="spec-table">
                         <tr>
                             <td>X11</td>
                             <td>✅ Fully supported (recommended)</td>
@@ -665,11 +657,11 @@
                         <tr>
                             <td colspan="2" class="note">Some features are limited under Wayland</td>
                         </tr>
-                    </table></div>
+                    </table>
                 </div>
                 <div class="spec-card">
                     <h3>💾 Memory Requirements</h3>
-                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="Product specifications and comparison"><table class="spec-table">
+                    <table class="spec-table">
                         <tr>
                             <td>small/medium model</td>
                             <td>8GB or more</td>
@@ -682,7 +674,7 @@
                             <td>large-v3</td>
                             <td>16GB or more recommended</td>
                         </tr>
-                    </table></div>
+                    </table>
                 </div>
             </div>
         </div>
@@ -946,8 +938,7 @@
     </section>
 
     <!-- Footer -->
-    <nav class="seo-navigation" aria-label="Related products"><h2>Related products</h2><ul><li><a href="https://mojosoft.biz/#products">All Mojosoft products</a></li><li><a href="https://mojosoftjp.github.io/rocketwhisper/en/">RocketWhisper for Windows</a></li><li><a href="https://mojosoftjp.github.io/rocketwhisper-mac/en/">RocketWhisper for Mac</a></li><li><a href="https://mojosoftjp.github.io/mira-ai/en/">Mira</a></li></ul></nav>
-<footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
