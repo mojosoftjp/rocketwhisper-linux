@@ -2,54 +2,111 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <script>!function(){var l=sessionStorage.getItem("rw-lang");if("ja"!==l&&("en"===l||!(navigator.language||"").startsWith("ja"))){var p=location.pathname.split("/").pop()||"index.html";location.replace("en/"+p+location.hash)}}();</script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <title>RocketWhisper Linux版 - AI音声認識・文字起こしソフト | オフライン対応・買い切り</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <title>RocketWhisper Linux版｜オフライン音声認識・文字起こし</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <meta name="description" content="RocketWhisper Linux版は完全オフラインで動作するAI音声認識・文字起こしソフトです。OpenAI Whisper搭載で高精度。Ubuntu、Debian、Fedora対応。NVIDIA GPU(CUDA/DGX Spark)で爆速認識。会議の議事録作成、動画の字幕生成に。月額不要の買い切りライセンス。">
+    <meta name="description" content="Ubuntu・Debian・Fedora向けのAI音声認識・文字起こしソフト。Whisperによるオフライン処理、NVIDIA CUDA対応、音声ファイルの一括文字起こしと字幕出力に対応。月額料金のない買い切りライセンスです。">
     <meta name="keywords" content="音声認識,文字起こし,Linux,Ubuntu,AI音声認識,Whisper,OpenAI Whisper,オフライン音声認識,ローカル音声認識,リアルタイム音声入力,会議 文字起こし,議事録作成,動画 文字起こし,字幕作成,SRT,VTT,NVIDIA CUDA,DGX Spark,GPU 音声認識,買い切り,月額不要,プライバシー保護,AppImage,Debian,Fedora,Linux 音声入力,Linux 文字起こし,音声認識ソフト,カスタム指示,バッチ処理,RocketWhisper">
-    <meta property="og:title" content="RocketWhisper Linux版 - AI音声認識・文字起こしソフト | オフライン・買い切り">
-    <meta property="og:description" content="Linux対応の完全オフラインAI音声認識ソフト。OpenAI Whisper搭載。NVIDIA CUDA/DGX Spark対応。会議の議事録、動画の字幕作成に。月額不要。">
+    <meta property="og:title" content="RocketWhisper Linux版｜オフライン音声認識・文字起こし">
+    <meta property="og:description" content="Ubuntu・Debian・Fedora向けのAI音声認識・文字起こしソフト。Whisperによるオフライン処理、NVIDIA CUDA対応、音声ファイルの一括文字起こしと字幕出力に対応。月額料金のない買い切りライセンスです。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mojosoftjp.github.io/rocketwhisper-linux/">
-    <meta property="og:site_name" content="RocketWhisper">
+    <meta property="og:site_name" content="Mojosoft">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="RocketWhisper Linux版 - AI音声認識・文字起こしソフト">
-    <meta name="twitter:description" content="Linux対応の完全オフラインAI音声認識ソフト。OpenAI Whisper搭載。NVIDIA CUDA対応。買い切り。">
-    <link rel="canonical" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
-    <link rel="alternate" hreflang="ja" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
-    <link rel="alternate" hreflang="en" href="https://mojosoftjp.github.io/rocketwhisper-linux/en/">
-    <link rel="alternate" hreflang="x-default" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
+    <meta name="twitter:title" content="RocketWhisper Linux版｜オフライン音声認識・文字起こし">
+    <meta name="twitter:description" content="Ubuntu・Debian・Fedora向けのAI音声認識・文字起こしソフト。Whisperによるオフライン処理、NVIDIA CUDA対応、音声ファイルの一括文字起こしと字幕出力に対応。月額料金のない買い切りライセンスです。">
+    
+    
+    
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
+    
+  <link rel="canonical" href="https://mojosoftjp.github.io/rocketwhisper-linux/">
+  <link rel="alternate" href="https://mojosoftjp.github.io/rocketwhisper-linux/" hreflang="ja">
+  <link rel="alternate" href="https://mojosoftjp.github.io/rocketwhisper-linux/en/" hreflang="en">
+  <link rel="alternate" href="https://mojosoftjp.github.io/rocketwhisper-linux/" hreflang="x-default">
+  <meta property="og:image" content="https://mojosoftjp.github.io/rocketwhisper-linux/images/favicon.png">
+  <meta name="twitter:image" content="https://mojosoftjp.github.io/rocketwhisper-linux/images/favicon.png">
+  <meta property="og:image:alt" content="RocketWhisper Linux版｜オフライン音声認識・文字起こし">
+  <meta name="twitter:image:alt" content="RocketWhisper Linux版｜オフライン音声認識・文字起こし">
+  <meta property="og:image:width" content="48">
+  <meta property="og:image:height" content="48">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "RocketWhisper Linux Edition",
-        "description": "Linux対応の完全オフラインAI音声認識・文字起こしソフト。OpenAI Whisper搭載。NVIDIA CUDA/DGX Spark対応。",
-        "url": "https://mojosoftjp.github.io/rocketwhisper-linux/",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "Linux (Ubuntu, Debian, Fedora)",
-        "offers": {
-            "@type": "Offer",
-            "price": "4800",
-            "priceCurrency": "JPY",
-            "description": "個人版ライセンス（買い切り・月額不要）"
+      "@type": "SoftwareApplication",
+      "@id": "https://mojosoftjp.github.io/rocketwhisper-linux/#software",
+      "name": "RocketWhisper Linux版",
+      "url": "https://mojosoftjp.github.io/rocketwhisper-linux/",
+      "description": "Ubuntu・Debian・Fedora向けのAI音声認識・文字起こしソフト。Whisperによるオフライン処理、NVIDIA CUDA対応、音声ファイルの一括文字起こしと字幕出力に対応。月額料金のない買い切りライセンスです。",
+      "image": "https://mojosoftjp.github.io/rocketwhisper-linux/images/favicon.png",
+      "operatingSystem": "Linux",
+      "applicationCategory": "UtilitiesApplication",
+      "inLanguage": "ja",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://mojosoft.biz/#organization",
+        "name": "Mojosoft",
+        "url": "https://mojosoft.biz/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "4800",
+        "priceCurrency": "JPY",
+        "description": "個人版ライセンス（買い切り・月額不要）",
+        "url": "https://mojosoftjp.github.io/rocketwhisper-linux/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://mojosoftjp.github.io/rocketwhisper-linux/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Mojosoft",
+          "item": "https://mojosoft.biz/"
         },
-        "softwareVersion": "1.1.2",
-        "author": {
-            "@type": "Organization",
-            "name": "Mojosoft Co., Ltd."
-        },
-        "inLanguage": ["ja", "en"],
-        "featureList": "オフライン音声認識, リアルタイム文字起こし, NVIDIA CUDA GPU加速, 動画文字起こし, SRT/VTT字幕出力, AI処理, カスタム指示, バッチ処理, AppImage配布"
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "RocketWhisper Linux版",
+          "item": "https://mojosoftjp.github.io/rocketwhisper-linux/"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://mojosoftjp.github.io/rocketwhisper-linux/#webpage",
+      "url": "https://mojosoftjp.github.io/rocketwhisper-linux/",
+      "name": "RocketWhisper Linux版｜オフライン音声認識・文字起こし",
+      "inLanguage": "ja",
+      "mainEntity": {
+        "@id": "https://mojosoftjp.github.io/rocketwhisper-linux/#software"
+      },
+      "breadcrumb": {
+        "@id": "https://mojosoftjp.github.io/rocketwhisper-linux/#breadcrumb"
+      }
     }
-    </script>
+  ]
+}
+</script>
+<style id="seo-navigation-style">
+.seo-navigation{max-width:1040px;margin:32px auto;padding:24px;line-height:1.8;border-top:1px solid #8886}
+.seo-navigation h2{font-size:1.2rem;margin:0 0 12px}.seo-navigation ul{padding-left:1.2em;display:flex;flex-wrap:wrap;gap:8px 28px}
+.seo-navigation a{text-decoration:underline;text-underline-offset:3px}.seo-navigation details{padding:12px 0;border-bottom:1px solid #8884}
+.seo-navigation summary{cursor:pointer;font-weight:600}.seo-navigation p{margin:10px 0}.seo-product-label{display:block;font-size:.35em;line-height:1.5;margin-bottom:.6em;letter-spacing:0}
+.seo-table-scroll{max-width:100%;overflow-x:auto;margin:16px 0}code{overflow-wrap:anywhere;word-break:break-word}
+@media(prefers-reduced-motion:reduce){.fade-in,.reveal,.reveal-scale,.rv{opacity:1!important;transform:none!important;animation:none!important;transition:none!important}}
+</style><noscript><style>.fade-in,.reveal,.reveal-scale,.rv{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
     <!-- Space Background Effects -->
@@ -510,7 +567,7 @@
             <div class="specs-grid">
                 <div class="spec-card">
                     <h3>📦 対応ディストリビューション</h3>
-                    <table class="spec-table">
+                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="製品仕様・比較表"><table class="spec-table">
                         <tr>
                             <td>Ubuntu</td>
                             <td>20.04 LTS 以上</td>
@@ -535,11 +592,11 @@
                             <td>Arch Linux</td>
                             <td>Rolling</td>
                         </tr>
-                    </table>
+                    </table></div>
                 </div>
                 <div class="spec-card">
                     <h3>💻 アーキテクチャ</h3>
-                    <table class="spec-table">
+                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="製品仕様・比較表"><table class="spec-table">
                         <tr>
                             <td>ARM64 (aarch64)</td>
                             <td>✅ 推奨（DGX Spark等）</td>
@@ -548,11 +605,11 @@
                             <td>x86_64 (AMD64)</td>
                             <td>✅ 対応</td>
                         </tr>
-                    </table>
+                    </table></div>
                 </div>
                 <div class="spec-card">
                     <h3>📋 必須パッケージ</h3>
-                    <table class="spec-table">
+                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="製品仕様・比較表"><table class="spec-table">
                         <tr>
                             <td><code>pulseaudio-utils</code></td>
                             <td>マイク録音（parec）</td>
@@ -569,11 +626,11 @@
                             <td><code>ffmpeg</code></td>
                             <td>音声変換（任意）</td>
                         </tr>
-                    </table>
+                    </table></div>
                 </div>
                 <div class="spec-card">
                     <h3>🎮 CUDA対応GPU</h3>
-                    <table class="spec-table">
+                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="製品仕様・比較表"><table class="spec-table">
                         <tr>
                             <td>DGX Spark</td>
                             <td>Blackwell ✅ 最適化</td>
@@ -589,11 +646,11 @@
                         <tr>
                             <td colspan="2" class="note">GPUがない場合はCPUで動作</td>
                         </tr>
-                    </table>
+                    </table></div>
                 </div>
                 <div class="spec-card">
                     <h3>⚠️ ディスプレイサーバー</h3>
-                    <table class="spec-table">
+                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="製品仕様・比較表"><table class="spec-table">
                         <tr>
                             <td>X11</td>
                             <td>✅ 完全対応（推奨）</td>
@@ -605,11 +662,11 @@
                         <tr>
                             <td colspan="2" class="note">Waylandでは一部機能に制限があります</td>
                         </tr>
-                    </table>
+                    </table></div>
                 </div>
                 <div class="spec-card">
                     <h3>💾 メモリ要件</h3>
-                    <table class="spec-table">
+                    <div class="seo-table-scroll" role="region" tabindex="0" aria-label="製品仕様・比較表"><table class="spec-table">
                         <tr>
                             <td>small/mediumモデル</td>
                             <td>8GB以上</td>
@@ -622,7 +679,7 @@
                             <td>large-v3</td>
                             <td>16GB以上推奨</td>
                         </tr>
-                    </table>
+                    </table></div>
                 </div>
             </div>
         </div>
@@ -886,7 +943,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <nav class="seo-navigation" aria-label="関連製品"><h2>関連製品</h2><ul><li><a href="https://mojosoft.biz/#products">Mojosoftの製品一覧</a></li><li><a href="https://mojosoftjp.github.io/rocketwhisper/">RocketWhisper Windows版</a></li><li><a href="https://mojosoftjp.github.io/rocketwhisper-mac/ja/">RocketWhisper Mac版</a></li><li><a href="https://mojosoftjp.github.io/mira-ai/">Mira</a></li></ul></nav>
+<footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
